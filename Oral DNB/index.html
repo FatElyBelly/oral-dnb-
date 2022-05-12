@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Oral DNB</title>
+</head>
+
+<body>
+
+    <div class="navcontainer">
+        <nav class="navbar">
+            <ul class="navItems">
+                <li><a href="#mainSection" class="navbarLink">Home</a></li>
+                <li><a href="#metierSection" class="navbarLink">Le métier</a></li>
+                <li><a href="#etudeSection" class="navbarLink">Les études</a></li>
+                <li><a href="#conclusion" class="navbarLink">Conclusion</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="pageOverlay" id="pageOverlay"></div>
+
+    <div class="showImage" id="showImage" onclick="closeImage()">
+        <img class="shownImage" id="shownImage" src="images/software.png">
+    </div>
+
+    <section id="mainSection">
+        <h1>Ingénieur Logiciel</h1>
+        <h3>Parcours Avenir</h3>
+        <div class="pfpDiv">
+            <div>
+                <p>Interviewer:</p>
+                <img class="pfp" onclick="openImage('elybelly')" src="images/elybelly.png">
+            </div>
+            <div>
+                <p>Interviewé:</p>
+                <img class="pfp" onclick="openImage('ottooctavius')" src="images/ottooctavius.png">
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer layer2"></div>
+    <div class="spacer layer1"></div>
+
+    <section id="metierSection">
+        <h1>Le métier d'ingénieur logiciel</h1>
+        <ul class="metierList" id="metierList">
+            <li><button class="metierBtn" onClick="openConsisteMetier()"><img id="consisteImg" class="metierImg"
+                        src="images/software.png"></button></li>
+            <li><button class="metierBtn" onClick="openConditionMetier()"><img id="conditionImg" class="metierImg"
+                        src="images/problem-solving.png"></button></li>
+        </ul>
+        <div id="resetScrollAfterMetier"></div>
+        <div class="metierContent" id="consisteMetier">
+            <div class="metierContentDiv">
+                <h3>Frontal vs Dorsal</h3>
+                <div class="metierContentDivInnerContent consisteMetierInnerContent">
+                    <img class="icebergImg" id="icebergImg" onclick="openImage('iceberg')" src="images/iceberg.png">
+                </div>
+            </div>
+            <div class="metierContentDiv">
+                <h3>Polyvalence</h3>
+                <div class="metierContentDivInnerContent consisteMetierInnerContent">
+                    <img class="metierContentDivInnerContentImg" onclick="openImage('mern')" src="images/mern.png">
+                </div>
+            </div>
+            <div class="metierContentDiv">
+                <h3>Cycle</h3>
+                <div class="metierContentDivInnerContent consisteMetierInnerContent">
+                    <img class="metierContentDivInnerContentImg" onclick="openImage('cycle')" src="images/cycle.png">
+                </div>
+            </div>
+        </div>
+        <div class="metierContent" id="conditionMetier">
+            <div class="metierContentDiv">
+                <h3>+/-</h3>
+                <div class="metierContentDivInnerContent">
+                    <div class="points">
+                        <div class="line">
+                            
+                            <img class="metierContentDivInnerContentImgSmall" onclick="openImage('github')" src="images/github.png">
+                            <img class="metierContentDivInnerContentImgSmall" onclick="openImage('office')"" src="images/office.png">
+                        </div>
+                        <div class="line">
+                            <img class="metierContentDivInnerContentImgSmall" onclick="openImage('time')" src="images/time.png">
+                            <img class="metierContentDivInnerContentImgSmall" onclick="openImage('joboffer')" src="images/joboffer.png">
+                        </div>
+                    </div>
+                    <div class="points">
+                        <div class="line">
+                            <img class="metierContentDivInnerContentImg" onclick="openImage('money')" src="images/money.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="metierContentDiv">
+                <h3>Environnement</h3>
+                <div class="metierContentDivInnerContent">
+                    <img class="metierContentDivInnerContentImg" onclick="openImage('wfo')" src="images/wfo.png">
+                    <img class="metierContentDivInnerContentImg" onclick="openImage('wfh')" src="images/wfh.png">
+                </div>
+            </div>
+            <div class="metierContentDiv">
+                <h3>Salaire</h3>
+                <div class="metierContentDivInnerContent">
+                    <p class="salaireListItem">Europe: 70k</p>
+                    <p class="salaireListItem">Amerique: 100k</p>
+                    <br>
+                    <p class="salaireListItem">L3: 138k</p>
+                    <p class="salaireListItem">L4: 167k</p>
+                    <p class="salaireListItem">L5: 196k</p>
+                    <p class="salaireListItem">L6: 232k</p>
+                    <p class="salaireListItem">L7: 276k</p>
+                    <p class="salaireListItem">L8: 331k</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer spikewave"></div>
+
+    <section id="etudeSection">
+        <h1>Les études nécessaires pour ce métier</h1>
+        <div class="etudeSectionContent">
+            <img class="etudeSectionContentImg" onclick="openImage('bachelor')" src="images/bachelor.png">
+            <img class="etudeSectionContentImg" onclick="openImage('stem')" src="images/stem.png">
+            <img class="etudeSectionContentImg" onclick="openImage('experience')" src="images/experience.png">
+        </div>
+    </section>
+
+    <div class="spacer steps"></div>
+    <div class="spacer belowSteps"></div>
+
+    <section id="conclusion">
+        <h1>Conclusion sur ce projet</h1>
+        <div class="conclusionDiv">
+            <div class="slides"><img class="conclusionDivImg" onclick="openImage('gaming')" src="images/gaming.png"></div>
+            <div class="slides"><img class="conclusionDivImg" onclick="openImage('app')" src="images/app.png"></div>
+            <div class="slides"><img class="conclusionDivImg" onclick="openImage('www')" src="images/www.png"></div>
+        </div>
+    </section>
+
+    <div class="spacer lastWave"></div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
